@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
 
   config.vbguest.auto_update = false if defined?(VagrantVbguest::Middleware)
   config.ssh.forward_agent = true
-  config.vm.network 'private_network', ip: '192.168.56.100'
+  config.vm.network 'private_network', ip: '192.168.56.200'
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ['modifyvm', :id, '--cpus', '1', '--memory', '256']
