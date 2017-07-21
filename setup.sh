@@ -7,6 +7,8 @@ function InstallRabbitMq {
 
 function SetupRabbitMq {
   rabbitmq-plugins enable rabbitmq_management
+  rabbitmq-plugins enable rabbitmq_web_mqtt
+
   rabbitmqctl add_user root root
   rabbitmqctl set_user_tags root administrator
   rabbitmqctl set_permissions -p / root ".*" ".*" ".*"
